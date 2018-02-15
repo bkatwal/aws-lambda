@@ -15,6 +15,7 @@ def get_elb_names(instance_id):
         for ec2Id in elb['Instances']:
             if ec2Id['InstanceId'] == instance_id:
                 results.append(elb['LoadBalancerName'])
+    return results
 
 
 def get_instance_id_from_event(event):
